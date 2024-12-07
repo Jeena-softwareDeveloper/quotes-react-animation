@@ -1,0 +1,157 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2f3c7e, #6a7abf); /* Softer galaxy background gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  background-size: cover;
+  position: relative;
+  animation: starryBackground 15s infinite linear;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);  /* Transparent dark background */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #ffd700;  /* Soft gold color */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.button {
+  background: #3b5998;  /* Soft blue color */
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.button:hover {
+  background: #ff6347;  /* Soft red color on hover */
+  transform: scale(1.1);
+}
+
+.quotes {
+  font-size: 1.5rem;
+  color: #e0e0e0;  /* Light gray for quotes */
+  margin: 20px 0;
+  font-style: italic;
+  animation: fadeInUp 2s ease-out;
+  max-width: 80%;
+  text-align: center;
+}
+
+.author {
+  font-size: 1.2rem;
+  color: #ff8c00;  /* Orange for author */
+  margin-top: 15px;
+  font-weight: bold;
+  animation: fadeInUp 2s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px;
+    width: 80%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .quotes {
+    font-size: 1.3rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+}
+
+/* Galaxy Background Animation */
+@keyframes starryBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 4000px 4000px;
+  }
+}
+
+/* Text Glow Effect */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+  }
+}
+
+/* Button Pulse Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: #3b5998;
+  }
+  50% {
+    transform: scale(1.1);
+    background: #ff6347;
+  }
+  100% {
+    transform: scale(1);
+    background: #3b5998;
+  }
+}
+
+/* Fade In Up for Quotes */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
